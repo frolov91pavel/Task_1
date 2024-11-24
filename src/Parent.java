@@ -1,4 +1,4 @@
-public class Parent {
+public abstract class Parent {
     private String name;
 
     // Статический блок 1
@@ -23,11 +23,12 @@ public class Parent {
 
     // Нестатический блок 2
     {
-        System.out.println("Parent:static 2");
+        System.out.println("Parent:instance 2");
     }
 
     // Конструктор с параметром Name
     public Parent(String name) {
+        this.name = name;
         System.out.println("Parent:name-constructor");
     }
 }

@@ -17,15 +17,17 @@ public class Child extends Parent {
 
     // Конструктор без параметров
     public Child() {
+        super(); // Необязательно, компилятор вызовет конструктор Parent() автоматически
         System.out.println("Child:constructor");
     }
 
     // Конструктор с параметром Name
     public Child(String name) {
+        super(name); // Вызываем конструктор Parent(String name)
         System.out.println("Child:name-constructor");
     }
 
-    // Нестатичный блок 2
+    // Нестатический блок 2
     {
         System.out.println("Child:instance 2");
     }
